@@ -170,12 +170,12 @@ sequenceDiagram
 
 ## 5. Harmonogram Realizacji (Roadmap)
 
-### Faza 1: Fundamenty i Kontrakt XML
+### Faza 1: Fundamenty i Kontrakt XML [ZAKOŃCZONE]
 *   **Cel**: Ustalenie wspólnego formatu i stworzenie szkieletu aplikacji.
 *   **Zadania**:
-    *   Definicja klas C# w `Shared Library` (.NET Standard 2.0).
-    *   Implementacja mechanizmu serializacji/deserializacji XML.
-    *   Stworzenie MVP aplikacji Desktopowej (WPF + Material Design) do manualnego tworzenia XML.
+    *   [x] Definicja klas C# w `Shared Library` (.NET Standard 2.0).
+    *   [x] Implementacja mechanizmu serializacji/deserializacji XML.
+    *   [x] Stworzenie MVP aplikacji Desktopowej (WPF + Material Design) do manualnego tworzenia XML.
 
 ### Faza 2: Moduł Image-to-SVG (Desktop)
 *   **Cel**: Automatyzacja tworzenia geometrii z grafik rastrowych.

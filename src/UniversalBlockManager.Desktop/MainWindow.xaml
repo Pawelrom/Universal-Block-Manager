@@ -1,0 +1,143 @@
+﻿<Window x:Class="UniversalBlockManager.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:UniversalBlockManager.Desktop"
+        xmlns:vm="clr-namespace:UniversalBlockManager.Desktop.ViewModels"
+        mc:Ignorable="d"
+        Title="Universal Block Manager - MVP" Height="700" Width="900"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="14"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{materialDesign:MaterialDesignFont}">
+    
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+
+    <materialDesign:DialogHost Identifier="RootDialog">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- AppBar -->
+            <materialDesign:ColorZone Mode="PrimaryMid" Padding="16" materialDesign:ElevationAssist.Elevation="Dp4">
+                <DockPanel>
+                    <materialDesign:PackIcon Kind="Package" Width="32" Height="32" VerticalAlignment="Center" Margin="0,0,16,0" />
+                    <TextBlock Style="{StaticResource MaterialDesignHeadline5TextBlock}" Text="Universal Block Manager" VerticalAlignment="Center" />
+                </DockPanel>
+            </materialDesign:ColorZone>
+
+            <!-- Main Content -->
+            <ScrollViewer Grid.Row="1" Padding="24" HorizontalScrollBarVisibility="Auto">
+                <StackPanel MaxWidth="800" HorizontalAlignment="Center">
+                    
+                    <!-- Basic Info -->
+                    <materialDesign:Card Padding="24" Margin="0,0,0,24" materialDesign:ElevationAssist.Elevation="Dp2">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+                                <materialDesign:PackIcon Kind="InformationOutline" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{DynamicResource PrimaryHueMidBrush}" />
+                                <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Block Basic Info" />
+                            </StackPanel>
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox Grid.Column="0" Margin="0,0,16,0" 
+                                         materialDesign:HintAssist.Hint="Block Name" 
+                                         Text="{Binding BlockName, UpdateSourceTrigger=PropertyChanged}" 
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                <TextBox Grid.Column="1" 
+                                         materialDesign:HintAssist.Hint="Units (e.g. mm, m)" 
+                                         Text="{Binding Units, UpdateSourceTrigger=PropertyChanged}" 
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            </Grid>
+                        </StackPanel>
+                    </materialDesign:Card>
+
+                    <!-- Header -->
+                    <materialDesign:Card Padding="24" Margin="0,0,0,24" materialDesign:ElevationAssist.Elevation="Dp2">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+                                <materialDesign:PackIcon Kind="ArrowAll" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{DynamicResource PrimaryHueMidBrush}" />
+                                <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Insertion Point &amp; Scale" />
+                            </StackPanel>
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox Grid.Column="0" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Base Point X" 
+                                         Text="{Binding BasePointX, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                <TextBox Grid.Column="1" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Base Point Y" 
+                                         Text="{Binding BasePointY, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                <TextBox Grid.Column="2" materialDesign:HintAssist.Hint="Scale" 
+                                         Text="{Binding ScaleFactor, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            </Grid>
+                        </StackPanel>
+                    </materialDesign:Card>
+
+                    <!-- Attributes -->
+                    <materialDesign:Card Padding="24" materialDesign:ElevationAssist.Elevation="Dp2">
+                        <StackPanel>
+                            <Grid Margin="0,0,0,16">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="FormatListBulleted" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{DynamicResource PrimaryHueMidBrush}" />
+                                    <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Attributes" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <Button HorizontalAlignment="Right" Command="{Binding AddAttributeCommand}" 
+                                        Style="{StaticResource MaterialDesignFloatingActionMiniButton}" ToolTip="Add Attribute">
+                                    <materialDesign:PackIcon Kind="Plus" />
+                                </Button>
+                            </Grid>
+                            
+                            <ItemsControl ItemsSource="{Binding Attributes}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,8">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBox Grid.Column="0" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Key" 
+                                                     Text="{Binding Key, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                            <TextBox Grid.Column="1" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Value" 
+                                                     Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Bottom Action Bar -->
+            <materialDesign:ColorZone Grid.Row="2" Mode="Light" Padding="16" materialDesign:ElevationAssist.Elevation="Dp8">
+                <Button Command="{Binding SaveCommand}" 
+                        Style="{StaticResource MaterialDesignRaisedButton}" 
+                        HorizontalAlignment="Right"
+                        Width="200"
+                        Height="45">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="ContentSave" VerticalAlignment="Center" Margin="0,0,12,0" />
+                        <TextBlock Text="EXPORT AS XML" VerticalAlignment="Center" FontWeight="Bold" />
+                    </StackPanel>
+                </Button>
+            </materialDesign:ColorZone>
+        </Grid>
+    </materialDesign:DialogHost>
+</Window>

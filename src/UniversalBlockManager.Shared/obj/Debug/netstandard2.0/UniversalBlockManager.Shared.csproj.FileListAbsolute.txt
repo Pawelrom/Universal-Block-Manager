@@ -1,0 +1,11 @@
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\bin\Debug\netstandard2.0\UniversalBlockManager.Shared.deps.json
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\bin\Debug\netstandard2.0\UniversalBlockManager.Shared.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\bin\Debug\netstandard2.0\UniversalBlockManager.Shared.pdb
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\obj\Debug\netstandard2.0\UniversalBlockManager.Shared.csproj.AssemblyReference.cache
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\obj\Debug\netstandard2.0\UniversalBlockManager.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\obj\Debug\netstandard2.0\UniversalBlockManager.Shared.AssemblyInfoInputs.cache
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\obj\Debug\netstandard2.0\UniversalBlockManager.Shared.AssemblyInfo.cs
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\obj\Debug\netstandard2.0\UniversalBlockManager.Shared.csproj.CoreCompileInputs.cache
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\obj\Debug\netstandard2.0\UniversalBlockManager.Shared.sourcelink.json
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\obj\Debug\netstandard2.0\UniversalBlockManager.Shared.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Shared\obj\Debug\netstandard2.0\UniversalBlockManager.Shared.pdb

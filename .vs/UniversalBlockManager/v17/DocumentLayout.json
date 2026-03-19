@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pawel.roman\\Desktop\\Antigravity\\ExportBlokowZACizObrazka\\Programy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0411279F-CB90-4435-B986-60365190C239}|src\\UniversalBlockManager.Shared.Tests\\UniversalBlockManager.Shared.Tests.csproj|c:\\users\\pawel.roman\\desktop\\antigravity\\exportblokowzacizobrazka\\programy\\src\\universalblockmanager.shared.tests\\universalblockmanager.shared.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0411279F-CB90-4435-B986-60365190C239}|src\\UniversalBlockManager.Shared.Tests\\UniversalBlockManager.Shared.Tests.csproj|solutionrelative:src\\universalblockmanager.shared.tests\\universalblockmanager.shared.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UniversalBlockManager.Shared.Tests",
+              "DocumentMoniker": "C:\\Users\\pawel.roman\\Desktop\\Antigravity\\ExportBlokowZACizObrazka\\Programy\\src\\UniversalBlockManager.Shared.Tests\\UniversalBlockManager.Shared.Tests.csproj",
+              "RelativeDocumentMoniker": "src\\UniversalBlockManager.Shared.Tests\\UniversalBlockManager.Shared.Tests.csproj",
+              "ToolTip": "C:\\Users\\pawel.roman\\Desktop\\Antigravity\\ExportBlokowZACizObrazka\\Programy\\src\\UniversalBlockManager.Shared.Tests\\UniversalBlockManager.Shared.Tests.csproj",
+              "RelativeToolTip": "src\\UniversalBlockManager.Shared.Tests\\UniversalBlockManager.Shared.Tests.csproj",
+              "ViewState": "AgIAAAAAAACAmpmZmZkZwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-19T13:17:48.161Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

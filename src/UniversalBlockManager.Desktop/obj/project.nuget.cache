@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "RIZKR3uWYf8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pawel.roman\\Desktop\\Antigravity\\ExportBlokowZACizObrazka\\Programy\\src\\UniversalBlockManager.Desktop\\UniversalBlockManager.Desktop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}
