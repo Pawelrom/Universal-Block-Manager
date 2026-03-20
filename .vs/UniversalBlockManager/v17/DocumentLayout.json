@@ -27,7 +27,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UniversalBlockManager.Shared.Tests",
+              "Title": "UniversalBlockManager.Shared.Tests.csproj",
               "DocumentMoniker": "C:\\Users\\pawel.roman\\Desktop\\Antigravity\\ExportBlokowZACizObrazka\\Programy\\src\\UniversalBlockManager.Shared.Tests\\UniversalBlockManager.Shared.Tests.csproj",
               "RelativeDocumentMoniker": "src\\UniversalBlockManager.Shared.Tests\\UniversalBlockManager.Shared.Tests.csproj",
               "ToolTip": "C:\\Users\\pawel.roman\\Desktop\\Antigravity\\ExportBlokowZACizObrazka\\Programy\\src\\UniversalBlockManager.Shared.Tests\\UniversalBlockManager.Shared.Tests.csproj",

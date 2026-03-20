@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UniversalBlockManager.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c27d596c936088dca4e71f0eb76b023fc824a92b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0d4e574e042a09153f259252ecbca2898e11e40")]
 [assembly: System.Reflection.AssemblyProductAttribute("UniversalBlockManager.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UniversalBlockManager.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
