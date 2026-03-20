@@ -28,3 +28,16 @@ C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\U
 C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\obj\Debug\net8.0-windows\Universa.EFB07A6A.Up2Date
 C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\obj\Debug\net8.0-windows\UniversalBlockManager.Desktop.genruntimeconfig.cache
 C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\obj\Debug\net8.0-windows\ref\UniversalBlockManager.Desktop.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\BitmapToVector.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\SkiaSharp.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libSkiaSharp.pdb
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\runtimes\win-x64\native\libSkiaSharp.pdb
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\runtimes\win-x86\native\libSkiaSharp.pdb
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\OpenTK.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\GLWpfControl.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\SkiaSharp.Views.Desktop.Common.dll
+C:\Users\pawel.roman\Desktop\Antigravity\ExportBlokowZACizObrazka\Programy\src\UniversalBlockManager.Desktop\bin\Debug\net8.0-windows\SkiaSharp.Views.WPF.dll

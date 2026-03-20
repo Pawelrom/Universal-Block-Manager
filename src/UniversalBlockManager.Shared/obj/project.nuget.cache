@@ -1,11 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "t1d97ai82OY=",
+  "dgSpecHash": "4YIAXrqhhB8=",
   "success": true,
   "projectFilePath": "C:\\Users\\pawel.roman\\Desktop\\Antigravity\\ExportBlokowZACizObrazka\\Programy\\src\\UniversalBlockManager.Shared\\UniversalBlockManager.Shared.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\bitmaptovector\\1.16.3\\bitmaptovector.1.16.3.nupkg.sha512",
     "C:\\Users\\pawel.roman\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\pawel.roman\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\skiasharp\\3.119.2\\skiasharp.3.119.2.nupkg.sha512",
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\skiasharp.nativeassets.macos\\3.119.2\\skiasharp.nativeassets.macos.3.119.2.nupkg.sha512",
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\skiasharp.nativeassets.win32\\3.119.2\\skiasharp.nativeassets.win32.3.119.2.nupkg.sha512",
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\pawel.roman\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }

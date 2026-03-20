@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:UniversalBlockManager.Desktop"
         xmlns:vm="clr-namespace:UniversalBlockManager.Desktop.ViewModels"
         mc:Ignorable="d"
-        Title="Universal Block Manager - MVP" Height="700" Width="900"
+        Title="Universal Block Manager - Phase 2" Height="850" Width="1000"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="14"
@@ -36,102 +36,141 @@
                 </DockPanel>
             </materialDesign:ColorZone>
 
-            <!-- Main Content -->
-            <ScrollViewer Grid.Row="1" Padding="24" HorizontalScrollBarVisibility="Auto">
-                <StackPanel MaxWidth="800" HorizontalAlignment="Center">
-                    
-                    <!-- Basic Info -->
-                    <materialDesign:Card Padding="24" Margin="0,0,0,24" materialDesign:ElevationAssist.Elevation="Dp2">
-                        <StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
-                                <materialDesign:PackIcon Kind="InformationOutline" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{DynamicResource PrimaryHueMidBrush}" />
-                                <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Block Basic Info" />
-                            </StackPanel>
-                            
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <TextBox Grid.Column="0" Margin="0,0,16,0" 
-                                         materialDesign:HintAssist.Hint="Block Name" 
-                                         Text="{Binding BlockName, UpdateSourceTrigger=PropertyChanged}" 
-                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                                <TextBox Grid.Column="1" 
-                                         materialDesign:HintAssist.Hint="Units (e.g. mm, m)" 
-                                         Text="{Binding Units, UpdateSourceTrigger=PropertyChanged}" 
-                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            </Grid>
-                        </StackPanel>
-                    </materialDesign:Card>
-
-                    <!-- Header -->
-                    <materialDesign:Card Padding="24" Margin="0,0,0,24" materialDesign:ElevationAssist.Elevation="Dp2">
-                        <StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
-                                <materialDesign:PackIcon Kind="ArrowAll" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{DynamicResource PrimaryHueMidBrush}" />
-                                <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Insertion Point &amp; Scale" />
-                            </StackPanel>
-                            
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <TextBox Grid.Column="0" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Base Point X" 
-                                         Text="{Binding BasePointX, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                                <TextBox Grid.Column="1" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Base Point Y" 
-                                         Text="{Binding BasePointY, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                                <TextBox Grid.Column="2" materialDesign:HintAssist.Hint="Scale" 
-                                         Text="{Binding ScaleFactor, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            </Grid>
-                        </StackPanel>
-                    </materialDesign:Card>
-
-                    <!-- Attributes -->
-                    <materialDesign:Card Padding="24" materialDesign:ElevationAssist.Elevation="Dp2">
-                        <StackPanel>
-                            <Grid Margin="0,0,0,16">
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="FormatListBulleted" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{DynamicResource PrimaryHueMidBrush}" />
-                                    <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Attributes" VerticalAlignment="Center" />
+            <!-- Main Content Area -->
+            <TabControl Grid.Row="1" Style="{StaticResource MaterialDesignTabControl}">
+                <!-- TAB 1: BLOCK DATA -->
+                <TabItem Header="BLOCK PROPERTIES">
+                    <ScrollViewer Padding="24" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel MaxWidth="800" HorizontalAlignment="Center">
+                            <!-- Basic Info -->
+                            <materialDesign:Card Padding="24" Margin="0,0,0,24" materialDesign:ElevationAssist.Elevation="Dp2">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+                                        <materialDesign:PackIcon Kind="InformationOutline" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{DynamicResource PrimaryHueMidBrush}" />
+                                        <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Block Basic Info" />
+                                    </StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox Grid.Column="0" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Block Name" 
+                                                 Text="{Binding BlockName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                        <TextBox Grid.Column="1" materialDesign:HintAssist.Hint="Units (e.g. mm, m)" 
+                                                 Text="{Binding Units, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </Grid>
                                 </StackPanel>
-                                <Button HorizontalAlignment="Right" Command="{Binding AddAttributeCommand}" 
-                                        Style="{StaticResource MaterialDesignFloatingActionMiniButton}" ToolTip="Add Attribute">
-                                    <materialDesign:PackIcon Kind="Plus" />
-                                </Button>
-                            </Grid>
-                            
-                            <ItemsControl ItemsSource="{Binding Attributes}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <Grid Margin="0,8">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <TextBox Grid.Column="0" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Key" 
-                                                     Text="{Binding Key, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                                            <TextBox Grid.Column="1" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Value" 
-                                                     Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                                        </Grid>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
+                            </materialDesign:Card>
+
+                            <!-- Insertion & Scale -->
+                            <materialDesign:Card Padding="24" Margin="0,0,0,24" materialDesign:ElevationAssist.Elevation="Dp2">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+                                        <materialDesign:PackIcon Kind="ArrowAll" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{DynamicResource PrimaryHueMidBrush}" />
+                                        <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Insertion Point &amp; Scale" />
+                                    </StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox Grid.Column="0" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Base Point X" 
+                                                 Text="{Binding BasePointX, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                        <TextBox Grid.Column="1" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Base Point Y" 
+                                                 Text="{Binding BasePointY, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                        <TextBox Grid.Column="2" materialDesign:HintAssist.Hint="Scale" 
+                                                 Text="{Binding ScaleFactor, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    </Grid>
+                                </StackPanel>
+                            </materialDesign:Card>
+
+                            <!-- Attributes -->
+                            <materialDesign:Card Padding="24" materialDesign:ElevationAssist.Elevation="Dp2">
+                                <StackPanel>
+                                    <Grid Margin="0,0,0,16">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="FormatListBulleted" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{DynamicResource PrimaryHueMidBrush}" />
+                                            <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Attributes" VerticalAlignment="Center" />
+                                        </StackPanel>
+                                        <Button HorizontalAlignment="Right" Command="{Binding AddAttributeCommand}" 
+                                                Style="{StaticResource MaterialDesignFloatingActionMiniButton}" ToolTip="Add Attribute">
+                                            <materialDesign:PackIcon Kind="Plus" />
+                                        </Button>
+                                    </Grid>
+                                    <ItemsControl ItemsSource="{Binding Attributes}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid Margin="0,8">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <TextBox Grid.Column="0" Margin="0,0,16,0" materialDesign:HintAssist.Hint="Key" 
+                                                             Text="{Binding Key, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                                    <TextBox Grid.Column="1" materialDesign:HintAssist.Hint="Value" 
+                                                             Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </materialDesign:Card>
                         </StackPanel>
-                    </materialDesign:Card>
-                </StackPanel>
-            </ScrollViewer>
+                    </ScrollViewer>
+                </TabItem>
+                
+                <!-- TAB 2: VECTORIZATION -->
+                <TabItem Header="IMAGE VECTORIZATION">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <!-- Sidebar -->
+                        <materialDesign:Card Grid.Column="0" Margin="12" Padding="16" materialDesign:ElevationAssist.Elevation="Dp1">
+                            <StackPanel>
+                                <Button Command="{Binding LoadImageCommand}" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="0,0,0,16">
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="ImageSearch" Margin="0,0,8,0" />
+                                        <TextBlock Text="LOAD IMAGE" />
+                                    </StackPanel>
+                                </Button>
+                                
+                                <Separator Style="{StaticResource MaterialDesignSeparator}" Margin="0,8"/>
+                                
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Image Path:" Margin="0,8,0,4" />
+                                <TextBlock Text="{Binding ImagePath}" TextWrapping="Wrap" FontSize="11" Foreground="{DynamicResource MaterialDesignBodyLight}" />
+                                
+                                <materialDesign:Card Margin="0,24,0,0" Padding="12" Background="{DynamicResource PrimaryHueLightBrush}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}">
+                                    <TextBlock Text="Tip: The black lines are the detected contours. Make sure the background is light."
+                                               TextWrapping="Wrap" FontSize="12" FontStyle="Italic" />
+                                </materialDesign:Card>
+                            </StackPanel>
+                        </materialDesign:Card>
+                        
+                        <!-- Canvas View -->
+                        <materialDesign:Card Grid.Column="1" Margin="12,12,24,12" Background="#F5F5F5" materialDesign:ElevationAssist.Elevation="Dp2">
+                            <Viewbox Stretch="Uniform">
+                                <Canvas Width="{Binding ImageWidth}" Height="{Binding ImageHeight}" ClipToBounds="True">
+                                    <!-- Image Preview -->
+                                    <Image Source="{Binding ImagePath}" Opacity="0.4"
+                                           Width="{Binding ImageWidth}" Height="{Binding ImageHeight}" 
+                                           Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                    
+                                    <!-- Vector Overlay -->
+                                    <Path Data="{Binding SvgPathData}" Fill="Transparent" Stroke="Black" StrokeThickness="1" />
+                                </Canvas>
+                            </Viewbox>
+                        </materialDesign:Card>
+                    </Grid>
+                </TabItem>
+            </TabControl>
 
             <!-- Bottom Action Bar -->
             <materialDesign:ColorZone Grid.Row="2" Mode="Light" Padding="16" materialDesign:ElevationAssist.Elevation="Dp8">
-                <Button Command="{Binding SaveCommand}" 
-                        Style="{StaticResource MaterialDesignRaisedButton}" 
-                        HorizontalAlignment="Right"
-                        Width="200"
-                        Height="45">
+                <Button Command="{Binding SaveCommand}" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Right" Width="200" Height="45">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="ContentSave" VerticalAlignment="Center" Margin="0,0,12,0" />
                         <TextBlock Text="EXPORT AS XML" VerticalAlignment="Center" FontWeight="Bold" />
